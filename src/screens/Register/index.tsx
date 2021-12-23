@@ -160,6 +160,7 @@ export const Register = () => {
               />
             </TransactionTypes>
             <CategorySelectButton
+              testID="category-button"
               title={category.name}
               onPress={handleOpenSelectCategoryModal}
             />
@@ -171,7 +172,7 @@ export const Register = () => {
           />
         </Form>
         
-        <Modal visible={categoryModalOpen}>
+        <Modal testID="category-modal" visible={categoryModalOpen}>
           <CategorySelect
             category={category}
             setCategory={setCategory}
